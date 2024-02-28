@@ -1,0 +1,212 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>EASY BUY - Home</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+</head>
+<body>
+  <center><h1>Welcome to EASY BUY</h1></center>
+  <br>
+
+<nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+    <a class="navbar-brand" href="#">EASY BUY</a>
+    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+    </button>
+    <div class="collapse navbar-collapse" id="navbarNav">
+        <ul class="navbar-nav">
+            <li class="nav-item">
+                <a class="nav-link" href="index.html">Home</a>
+            </li>
+            <li class="nav-item dropdown">
+                <!-- Categories dropdown menu for Men, Women, and Kids -->
+                <a class="nav-link dropdown-toggle" href="#" id="categoriesDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                    Categories
+                </a>
+                <div class="dropdown-menu" aria-labelledby="categoriesDropdown">
+                    <a class="dropdown-item" href="mens.html">Men</a>
+                    <a class="dropdown-item" href="womens.html">Women</a>
+                    <a class="dropdown-item" href="kids.html">Kids</a>
+                </div>
+            </li>
+           <li class="nav-item">
+               <a class="nav-link" href="cart.html">Cart</a> <!-- Link to the cart page -->
+           </li>
+            
+        </ul>
+
+        <!-- Search Bar -->
+        <form class="form-inline ml-auto">
+            <input class="form-control" type="text" placeholder="Search">
+            <button class="btn btn-outline-success" type="submit">Search</button>
+        </form>
+    </div>
+</nav>
+
+<!-- Home Page Content (Product Images, Prices, and "Add to Cart" buttons) -->
+<div class="container mt-4">
+    <h2> Products</h2>
+    <!-- Product Image and Price Section -->
+    <br>
+    <div class="row">
+        <div class="col-lg-6">
+            <img src="product9.jpg" class="img-fluid" alt="Product 9">
+        </div>
+        <div class="col-lg-6">
+            <img src="product10.jpg" class="img-fluid" alt="Product 10">
+            <h4>White shirt combo with shoes and accessories</h4>
+            <p>Original Price: $79.99</p>
+            <p>Discounted Price: $59.99</p>
+            <a href="#" class="btn btn-primary" onclick="addToCart('White shirt combo with shoes and accessories', 59.99, 'product10.jpg')">Add to Cart</a>
+        </div>
+    </div>
+
+    <!-- Product Cards for other products -->
+    <br>
+    <div class="row">
+        <div class="col-lg-3 col-md-4 col-sm-6 mb-4">
+            <div class="card">
+                <img src="product1.jpg" class="card-img-top" alt="Product 1">
+                <div class="card-body">
+                    <h5 class="card-title">Combo of three shirts</h5>
+                    <p class="card-text">Price: $29.99</p>
+                    <a href="#" class="btn btn-primary" onclick="addToCart('Combo of three shirts', 29.99, 'product1.jpg')">Add to Cart</a>
+                </div>
+            </div>
+        </div>
+
+        <!-- Add more product cards here -->
+        <div class="col-lg-3 col-md-4 col-sm-6 mb-4">
+            <div class="card">
+                <img src="product2.jpg" class="card-img-top" alt="Product 2">
+                <div class="card-body">
+                    <h5 class="card-title">T shirt solid color</h5>
+                    <p class="card-text">Price: $39.99</p>
+                    <a href="#" class="btn btn-primary" onclick="addToCart('T shirt solid color', 39.99, 'product2.jpg')">Add to Cart</a>
+                </div>
+            </div>
+        </div>
+
+        <div class="col-lg-3 col-md-4 col-sm-6 mb-4">
+            <div class="card">
+                <img src="product3.jpg" class="card-img-top" alt="Product 3">
+                <div class="card-body">
+                    <h5 class="card-title">Combo 5 t shirts</h5>
+                    <p class="card-text">Price: $49.99</p>
+                    <a href="#" class="btn btn-primary" onclick="addToCart('Combo 5 t shirts', 49.99, 'product3.jpg')">Add to Cart</a>
+                </div>
+            </div>
+        </div>
+
+        <div class="col-lg-3 col-md-4 col-sm-6 mb-4">
+            <div class="card">
+                <img src="product4.jpg" class="card-img-top" alt="Product 4">
+                <div class="card-body">
+                    <h5 class="card-title">Blue jeans color shirt</h5>
+                    <p class="card-text">Price: $59.99</p>
+                    <a href="#" class="btn btn-primary" onclick="addToCart('Blue jeans color shirt', 59.99, 'product4.jpg')">Add to Cart</a>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Adding more product cards -->
+    <div class="row">
+        <div class="col-lg-3 col-md-4 col-sm-6 mb-4">
+            <div class="card">
+                <img src="product5.jpg" class="card-img-top" alt="Product 5">
+                <div class="card-body">
+                    <h5 class="card-title">Blue frock</h5>
+                    <p class="card-text">Price: $19.99</p>
+                    <a href="#" class="btn btn-primary" onclick="addToCart('Stylish hat', 19.99, 'product5.jpg')">Add to Cart</a>
+                </div>
+            </div>
+        </div>
+
+        <div class="col-lg-3 col-md-4 col-sm-6 mb-4">
+            <div class="card">
+                <img src="product6.jpg" class="card-img-top" alt="Product 6">
+                <div class="card-body">
+                    <h5 class="card-title">Red frock</h5>
+                    <p class="card-text">Price: $29.99</p>
+                    <a href="#" class="btn btn-primary" onclick="addToCart('Summer sunglasses', 29.99, 'product6.jpg')">Add to Cart</a>
+                </div>
+            </div>
+        </div>
+
+        <div class="col-lg-3 col-md-4 col-sm-6 mb-4">
+            <div class="card">
+                <img src="product7.jpg" class="card-img-top" alt="Product 7">
+                <div class="card-body">
+                    <h5 class="card-title">White combo dress</h5>
+                    <p class="card-text">Price: $39.99</p>
+                    <a href="#" class="btn btn-primary" onclick="addToCart('Casual watch', 39.99, 'product7.jpg')">Add to Cart</a>
+                </div>
+            </div>
+        </div>
+
+        <div class="col-lg-3 col-md-4 col-sm-6 mb-4">
+            <div class="card">
+                <img src="product8.jpg" class="card-img-top" alt="Product 8">
+                <div class="card-body">
+                    <h5 class="card-title">Leather jacket</h5>
+                    <p class="card-text">Price: $49.99</p>
+                    <a href="#" class="btn btn-primary" onclick="addToCart('Leather wallet', 49.99, 'product8.jpg')">Add to Cart</a>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<div class="container mt-4">
+    <h2>Subscribe for new updates</h2>
+    <form id="subscribeForm" method="post" action="subscribe.php">
+        <div class="form-group">
+            <label for="email">Email</label>
+            <input type="email" class="form-control" id="email" name="email" required>
+        </div>
+        <button type="submit" class="btn btn-primary">Subscribe</button>
+    </form>
+</div>
+
+<!-- Add Bootstrap JS and jQuery -->
+<script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.3/dist/umd/popper.min.js"></script>
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+  <script>
+      // Function to add items to cart
+      function addToCart(productName, price, imageUrl) {
+          // Retrieve existing cart items from local storage
+          var cartItems = JSON.parse(localStorage.getItem('cart')) || [];
+
+          // Add new item to cart
+          cartItems.push({name: productName, price: price, image: imageUrl});
+
+          // Save updated cart back to local storage
+          localStorage.setItem('cart', JSON.stringify(cartItems));
+
+          // Alert user that item has been added to cart
+          alert('Item added to cart!');
+      }
+  </script>
+</body>
+
+<footer class="container mt-4">
+    <div class="row">
+        <div class="col-md-6">
+            <h4>Contact Us</h4>
+            <p>Email: contact@email.com</p> 
+            <p>call:+1147823781</p>
+        </div>
+        <div class="col-md-6">
+            <h4>Offline Shop</h4>
+            <p>Address: 5-6-16,</p> 
+            <p>Kachiguda,</p>
+            <p>Hyderabad</p>
+        </div>
+    </div>
+</footer>
+</html>

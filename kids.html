@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Kids' Clothing</title>
+    <!-- Add Bootstrap CSS -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+</head>
+<body>
+
+<!-- Navigation Bar on Kids' Clothing Page with Bootstrap -->
+<nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+    <a class="navbar-brand" href="#">EASY BUY</a>
+    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+    </button>
+    <div class="collapse navbar-collapse" id="navbarNav">
+        <ul class="navbar-nav">
+            <li class="nav-item">
+                <a class="nav-link" href="index.html">Home</a>
+            </li>
+            <li class="nav-item dropdown">
+                <!-- Categories dropdown menu for Men, Women, and Kids -->
+                <a class="nav-link dropdown-toggle" href="#" id="categoriesDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                    Categories
+                </a>
+                <div class="dropdown-menu" aria-labelledby="categoriesDropdown">
+                    <a class="dropdown-item" href="mens.html">Men</a>
+                    <a class="dropdown-item" href="womens.html">Women</a>
+                    <a class="dropdown-item" href="kids.html">Kids</a>
+                </div>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link" href="cart.html">Cart</a>
+            </li>
+           
+        </ul>
+    </div>
+</nav>
+
+<!-- Kids' Clothing Content (Product Images, Prices, and "Add to Cart" buttons) -->
+<div class="container mt-4">
+    <h2>Kids' Clothing</h2>
+
+    <!-- Product Cards with Bootstrap -->
+    <div class="row">
+        <div class="col-lg-3 col-md-4 col-sm-6 mb-4">
+            <div class="card">
+                <img src="kids_1.jpg" class="card-img-top" alt="Kids' product 1">
+                <div class="card-body">
+                    <h5 class="card-title">Kids' Product 1</h5>
+                    <p class="card-text">Price: $19.99</p>
+                    <button class="btn btn-primary" onclick="addToCart('Kids\' Product 1', 19.99, 'kids_product1.jpg')">Add to Cart</button>
+                </div>
+            </div>
+        </div>
+
+        <div class="col-lg-3 col-md-4 col-sm-6 mb-4">
+            <div class="card">
+                <img src="kids_2.jpg" class="card-img-top" alt="Kids' product 2">
+                <div class="card-body">
+                    <h5 class="card-title">Kids' Product 2</h5>
+                    <p class="card-text">Price: $29.99</p>
+                    <button class="btn btn-primary" onclick="addToCart('Kids\' Product 2', 29.99, 'kids_product2.jpg')">Add to Cart</button>
+                </div>
+            </div>
+        </div>
+
+        <!-- Add more kids' product cards here -->
+    </div>
+</div>
+
+<!-- Add Bootstrap JS and jQuery -->
+<script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.3/dist/umd/popper.min.js"></script>
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+<script>
+    // Function to add items to cart
+    function addToCart(productName, price, imageUrl) {
+        // Retrieve existing cart items from local storage
+        var cartItems = JSON.parse(localStorage.getItem('cart')) || [];
+
+        // Add new item to cart
+        cartItems.push({name: productName, price: price, image: imageUrl});
+
+        // Save updated cart back to local storage
+        localStorage.setItem('cart', JSON.stringify(cartItems));
+
+        // Alert user that item has been added to cart
+        alert('Item added to cart!');
+    }
+</script>
+</body>
+</html>
